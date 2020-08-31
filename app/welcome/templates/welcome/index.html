@@ -1,0 +1,31 @@
+{% extends "bootstrap_ui/bootstrap3-skeleton.html" %}
+
+{% load static %}
+
+{% block head-title %}
+    izCert
+{% endblock %}
+
+{% block head-css %}
+    <link href="{% static 'stylesheet/common/bootstrap.min.css' %}" media="screen" rel="stylesheet" type="text/css">
+    <link href="{% static 'stylesheet/common/sticky-footer.css' %}" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body-content %}
+<body>
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+      <h1 class="mt-5">izCert</h1>
+      <p class="lead">{{ message }}</p>
+      <p>Use <a href="../sticky-footer-navbar/">the sticky footer with a fixed navbar</a> if need be, too.</p>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">izCert</span>
+      </div>
+    </footer>
+  
+
+{% endblock %}
