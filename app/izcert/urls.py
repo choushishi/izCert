@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 
 urlpatterns = [
-    # Root page -> welcome page
-    re_path(r'^$', include('welcome.urls')),
 
     # Admin page
     path('admin/', admin.site.urls),
 
     # Account auth
-    path('account/', include('django.contrib.auth.urls')),
+    path('auth/', include('django.contrib.auth.urls')),
+
+    # Root page -> welcome page
+    # path('', include('welcome.urls')),
 ]

@@ -64,7 +64,9 @@ ROOT_URLCONF = 'izcert.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'auth/templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
