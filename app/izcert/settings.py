@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from django.urls import reverse
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -139,3 +140,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticroot")
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+# Login configures
+LOGIN_REDIRECT_URL = '/welcome/'
+LOGOUT_REDIRECT_URL = '/welcome/'

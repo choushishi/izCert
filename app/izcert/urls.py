@@ -25,5 +25,5 @@ urlpatterns = [
     path('auth/', include('django.contrib.auth.urls')),
 
     # Root page -> welcome page
-    # path('', include('welcome.urls')),
+    path('welcome/', include('welcome.urls')),
 ]

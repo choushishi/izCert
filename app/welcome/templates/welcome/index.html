@@ -18,12 +18,15 @@
     <main role="main" class="container">
       <h1 class="mt-5">izCert</h1>
       <p class="lead">{{ message }}</p>
-      <p>Use <a href="../sticky-footer-navbar/">the sticky footer with a fixed navbar</a> if need be, too.</p>
     </main>
 
     <footer class="footer">
       <div class="container">
-        <span class="text-muted">izCert</span>
+        {% if user.is_authenticated %}
+          <a class="text-muted" href="{% url 'logout' %}">logout</a>
+        {% else %}
+          <a class="text-muted" href="{% url 'login' %}">login</a>
+        {% endif %}
       </div>
     </footer>
   
