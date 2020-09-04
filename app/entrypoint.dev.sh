@@ -15,7 +15,6 @@ python manage.py flush --no-input
 python manage.py migrate
 
 # Create a superuser for dev environmnet
-export DJANGO_SUPERUSER_PASSWORD="adminpass"
 python manage.py createsuperuser --noinput \
 --username admin \
 --email admin@izcert.com
