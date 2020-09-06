@@ -1,9 +1,8 @@
-{% extends "bootstrap_ui/bootstrap4-skeleton.html" %}
+{% extends "global/base.html" %}
 
 {% load static %}
 
-{% block head-css %}
-    <link href="{% static 'css/bootstrap.min.css' %}" media="screen" rel="stylesheet" type="text/css">
+{% block extra-head-css %}
     <link href="{% static 'css/signin.css' %}" media="screen" rel="stylesheet" type="text/css">
 {% endblock %}
 

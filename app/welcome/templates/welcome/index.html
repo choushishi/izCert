@@ -1,13 +1,8 @@
-{% extends "bootstrap_ui/bootstrap3-skeleton.html" %}
+{% extends "global/base.html" %}
 
 {% load static %}
 
-{% block head-title %}
-    izCert
-{% endblock %}
-
-{% block head-css %}
-    <link href="{% static 'css/bootstrap.min.css' %}" media="screen" rel="stylesheet" type="text/css">
+{% block extra-head-css %}
     <link href="{% static 'css/sticky-footer.css' %}" media="screen" rel="stylesheet" type="text/css">
 {% endblock %}
 
