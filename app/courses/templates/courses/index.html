@@ -23,7 +23,7 @@
                       <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                     </div> -->
-                    <a class="btn btn-sm btn-outline-secondary" href="/courses/{{ course.url_name }}" role="button">View</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="{% url 'courses:detail' course.url_name %}" role="button">View</a>
                     <small class="text-muted">9 mins</small>
                   </div>
                 </div>
