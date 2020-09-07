@@ -29,5 +29,5 @@ jobs:
       working-directory: ${{env.working-directory}}
     - name: Test with Django test
       run: |
-        python manage.py test
+        python manage.py test --verbosity 2
       working-directory: ${{env.working-directory}}
