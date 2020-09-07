@@ -26,4 +26,7 @@ urlpatterns = [
 
     # Root page -> welcome page
     path('welcome/', include('welcome.urls')),
+
+    # ex: root/courses/
+    path('courses/', include('courses.urls')),
 ]

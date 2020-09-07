@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'bootstrap_ui',
 
     # apps
-    'welcome.apps.WelcomeConfig'
+    'welcome.apps.WelcomeConfig',
+    'courses.apps.CoursesConfig',
 ]
 
 MIDDLEWARE = [
