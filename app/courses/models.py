@@ -31,7 +31,7 @@ class Course(models.Model):
         stack = []
         token = ''
         for c in course_name:
-            if c.isalpha:
+            if c.isalpha():
                 token += c
             elif token:
                 if len(stack) < 5:
