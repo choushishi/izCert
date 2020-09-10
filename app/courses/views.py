@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 
-from .models import Course
+from .models import Course, LectureSession
 
 # Create your views here.
 def index(request):
@@ -17,7 +17,9 @@ def index(request):
 def detail(request, url_name):
     template = loader.get_template('courses/detail.html')
     course = Course.objects.get(url_name__exact=url_name)
+    sessions = course.lecturesession_set.all()
     context = {
-        'course': course
+        'course': course,
+        'sessions': sessions,
     }
     return HttpResponse(template.render(context, request))

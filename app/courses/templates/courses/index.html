@@ -7,7 +7,13 @@
 {% endblock %}
 
 {% block extra-body-content %}
-  <main role="main" class="container">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Courses</h1>
+      <p class="lead text-muted">All the courses you have subscribed to</p>
+    </div>
+  </section>
+  <main role="main" class="container bg-light">
     <div class="starter-template">
       <div class="row">
         {% if subscribed_course_list %}

@@ -29,4 +29,7 @@ urlpatterns = [
 
     # ex: root/courses/
     path('courses/', include('courses.urls')),
+
+    # Home page & fall backs
+    path('', include('welcome.urls')),
 ]
