@@ -7,8 +7,10 @@ from .models import Course
 # Create your views here.
 def index(request):
     template = loader.get_template('courses/index.html')
+    courses = [c.get_template_representation() for c in Course.objects.all()]
+
     context = {
-        'subscribed_course_list': Course.objects.all()
+        'subscribed_course_list': courses
     }
     return HttpResponse(template.render(context, request))
 
