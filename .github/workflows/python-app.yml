@@ -27,3 +27,4 @@ jobs:
     - name: Run tests in Docker Container
       run: |
         docker-compose run web python manage.py test
+      working-directory: .github/workflows
