@@ -30,9 +30,6 @@ urlpatterns = [
     # ex: root/courses/
     path('courses/', include('courses.urls')),
 
-    # ex: root/courses/
-    path('lecture/', include('courses.urls')),
-
     # Home page & fall backs
     path('', include('welcome.urls')),
 ]
