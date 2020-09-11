@@ -14,12 +14,20 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
-def detail(request, url_name):
-    template = loader.get_template('courses/detail.html')
+def course(request, url_name):
+    template = loader.get_template('courses/course.html')
     course = Course.objects.get(url_name__exact=url_name)
     sessions = course.lecturesession_set.all()
     context = {
         'course': course,
         'sessions': sessions,
+    }
+    return HttpResponse(template.render(context, request))
+
+def lecture(request, course_url_name, lecture_url_name):
+    template = loader.get_template('courses/lecture.html')
+    lecture = LectureSession.objects.get(url_name__exact=lecture_url_name)
+    context = {
+        'lecture': lecture,
     }
     return HttpResponse(template.render(context, request))

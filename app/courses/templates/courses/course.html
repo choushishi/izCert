@@ -20,7 +20,9 @@
       {% if sessions %}
       <ul class="list-group">
       {% for session in sessions %}
-        <li class="list-group-item">{{ session }}</li>
+        <li class="list-group-item">
+          <a class="text-secondary" href="{% url 'courses:lecture' course_url_name=course.url_name lecture_url_name=session.url_name %}"> {{ session }} </a>
+        </li>
       {% endfor %}
       </ul>
     {% else %}

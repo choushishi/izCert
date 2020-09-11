@@ -1,0 +1,20 @@
+{% extends "global/base.html" %}
+
+{% load static %}
+
+{% block extra-head-css %}
+  <link href="{% static 'courses/style.css' %}" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block extra-body-content %}
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">{{ lecture.session_name }}</h1>
+      <p class="lead text-muted">{{ lecture.session_description }}</p>
+    </div>
+  </section>
+  </div>
+
+
+
+{% endblock %}
