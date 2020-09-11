@@ -5,7 +5,6 @@ services:
     build: 
       context: ../../app
       dockerfile: Dockerfile.dev
-    command: python manage.py test
     volumes:
       - ../../app/:/usr/src/app/
     ports:
