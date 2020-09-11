@@ -3,11 +3,11 @@ version: '3.7'
 services:
   web:
     build: 
-      context: ../app
+      context: ../../app
       dockerfile: Dockerfile.dev
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ../app/:/usr/src/app/
+      - ../../app/:/usr/src/app/
     ports:
       - 8100:8000
     environment:
