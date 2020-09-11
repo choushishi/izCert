@@ -24,7 +24,7 @@ jobs:
         python-version: 3.8
     - name: Build&Start Docker Container
       run: |
-        docker-compose up --build
+        docker-compose up -d --build
       working-directory: .github/workflows
 #     - name: Install dependencies
 #       run: |
