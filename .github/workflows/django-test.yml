@@ -23,8 +23,8 @@ jobs:
     - name: Build&Start Docker Container
       run: |
         docker-compose up -d --build
-      working-directory: .github/workflows
+      working-directory: .github/workflows/django-test
     - name: Run tests in Docker Container
       run: |
         docker-compose run web python manage.py test -v 2
-      working-directory: .github/workflows
+      working-directory: .github/workflows/django-test
