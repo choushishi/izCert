@@ -13,8 +13,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./app
 
     steps:
     - uses: actions/checkout@v2
@@ -22,12 +20,11 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Install dependencies
+    - name: Build&Start Docker Container
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-      working-directory: ${{env.working-directory}}
-    - name: Test with Django test
+        docker-compose up -d --build
+      working-directory: .github/workflows/django-test
+    - name: Run tests in Docker Container
       run: |
-        python manage.py test --verbosity 2
-      working-directory: ${{env.working-directory}}
+        docker-compose run web python manage.py test -v 2
+      working-directory: .github/workflows/django-test

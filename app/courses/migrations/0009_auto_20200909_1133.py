@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='course',
             name='course_name',
-            field=models.CharField(max_length=200, validators=[courses.models.course_name_validator]),
+            field=models.CharField(max_length=200, validators=[courses.models.name_validator]),
         ),
         migrations.AlterField(
             model_name='course',
