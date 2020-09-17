@@ -22,8 +22,27 @@
   <div class="py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-6"><small>&ltPrevious</small></div>
-        <div class="col-md-6"><span class="float-right"><small>Next&gt</small></span></div>
+        <div class="col-md-6">
+          {% if previous_lecture %}
+            <a href="{% url 'courses:lecture' course_url_name=course.url_name lecture_url_name=previous_lecture.url_name %}">
+              <small>Previous</small>
+            </a>
+          {% else %}
+            <small class="text-secondary">Previous</small>
+          {% endif %}
+        </div>
+
+        <div class="col-md-6">
+          <span class="float-right">
+            {% if next_lecture %}
+              <a href="{% url 'courses:lecture' course_url_name=course.url_name lecture_url_name=next_lecture.url_name %}">
+                <small>Next</small>
+              </a>
+            {% else %}
+            <small class="text-secondary">Next</small>
+            {% endif %}
+          </span>
+        </div>
       </div>
     </div>
   </div>

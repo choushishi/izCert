@@ -57,6 +57,13 @@ class Course(models.Model):
         # Add support for other type of sessions in the future
         lectures = self.lecturesession_set.all()
         return sorted(lectures, key=lambda lecture : lecture.order)
+    
+    def get_prv_and_next_session(self, lecture_url_name):
+        sessions = self.get_sessions()
+        i = [session.url_name for session in sessions].index(lecture_url_name)
+        prv = sessions[i - 1] if i > 0 else None
+        nxt = sessions[i + 1] if i < len(sessions) - 1 else None
+        return prv, nxt
 
 class BaseSession(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
