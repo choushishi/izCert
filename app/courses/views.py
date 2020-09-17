@@ -17,7 +17,7 @@ def index(request):
 def course(request, url_name):
     template = loader.get_template('courses/course.html')
     course = Course.objects.get(url_name__exact=url_name)
-    sessions = course.lecturesession_set.all()
+    sessions = course.get_sessions()
     context = {
         'course': course,
         'sessions': sessions,

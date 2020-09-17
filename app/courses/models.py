@@ -51,6 +51,12 @@ class Course(models.Model):
             'course_description': self.course_description,
             'url_name': self.get_url_name(),
         }
+    
+    def get_sessions(self):
+        # Currently only lecture sessions are implmented
+        # Add support for other type of sessions in the future
+        lectures = self.lecturesession_set.all()
+        return sorted(lectures, key=lambda lecture : lecture.order)
 
 class BaseSession(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
@@ -58,6 +64,7 @@ class BaseSession(models.Model):
     session_description = models.CharField(max_length=2000)
     session_content = models.CharField(max_length=20000)
     url_name = models.SlugField(max_length=200, editable=False, unique=True)
+    order = models.IntegerField()
 
     class Meta:
         abstract = True
@@ -71,4 +78,3 @@ class BaseSession(models.Model):
 
 class LectureSession(BaseSession):
     session_duration = models.DurationField()
-
