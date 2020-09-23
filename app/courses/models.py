@@ -27,6 +27,8 @@ def generate_url_name(course_name):
                 return '-'.join(stack)
     if token:
         return '-'.join(stack + [token])
+    else:
+        return '-'.join(stack)
 
 # Create your models here.
 class Course(models.Model):
@@ -81,6 +83,7 @@ class BaseSession(models.Model):
 
     def save(self, *args, **kwargs):
         self.url_name = generate_url_name(self.session_name)
+        print('urlname is', self.url_name)
         super(BaseSession, self).save(*args, **kwargs)
 
 class LectureSession(BaseSession):
