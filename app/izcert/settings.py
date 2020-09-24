@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     # modules
     'bootstrap_ui',
+    'tinymce',
 
     # apps
     'welcome.apps.WelcomeConfig',

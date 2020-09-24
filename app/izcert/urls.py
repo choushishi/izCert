@@ -30,6 +30,9 @@ urlpatterns = [
     # ex: root/courses/
     path('courses/', include('courses.urls')),
 
+    # Tiny MCE
+    path('tinymce/', include('tinymce.urls')),
+
     # Home page & fall backs
     path('', include('welcome.urls')),
 ]

@@ -2,6 +2,7 @@ from django.db import models
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext as _
 from django.utils.safestring import mark_safe
+from tinymce.models import HTMLField
 
 def name_validator(value):
     if not any(c.isalpha() for c in value):
@@ -71,7 +72,7 @@ class BaseSession(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     session_name = models.CharField(max_length=200, validators=[name_validator])
     session_description = models.CharField(max_length=2000)
-    session_content = models.CharField(max_length=20000)
+    session_content = HTMLField()
     url_name = models.SlugField(max_length=200, editable=False, unique=True)
     order = models.IntegerField()
 
