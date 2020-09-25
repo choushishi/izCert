@@ -1,0 +1,63 @@
+[
+{
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "course_name": "Preparing for PMP Cert",
+    "course_description": "Course to get ready for PMP examination",
+    "url_name": "Preparing-for-PMP-Cert"
+  }
+},
+{
+  "model": "courses.lecturesession",
+  "pk": 1,
+  "fields": {
+    "course": 1,
+    "session_name": "What is PMP",
+    "session_description": "Short introduction to PMP",
+    "session_content": "<p><strong>Project Management Professional</strong>&nbsp;(<strong>PMP</strong>) is an internationally recognized professional designation offered by the&nbsp;<a title=\"Project Management Institute\" href=\"https://en.wikipedia.org/wiki/Project_Management_Institute\">Project Management Institute</a>&nbsp;(PMI).<sup id=\"cite_ref-1\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Project_Management_Professional#cite_note-1\">[1]</a></sup>&nbsp;As of August 2019, there are 932,720 active PMP certified individuals and 300 chartered chapters across 218 countries and territories worldwide.<sup id=\"cite_ref-2\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Project_Management_Professional#cite_note-2\">[2]</a></sup>&nbsp;The exam is based on the PMI&nbsp;<a title=\"Project Management Body of Knowledge\" href=\"https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge\">Project Management Body of Knowledge</a>.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "url_name": "What-is-PMP",
+    "order": 1,
+    "session_duration": "00:10:00"
+  }
+},
+{
+  "model": "courses.lecturesession",
+  "pk": 2,
+  "fields": {
+    "course": 1,
+    "session_name": "Exam syllabus",
+    "session_description": "Exam syllabus",
+    "session_content": "<p>The PMP exam is based on the&nbsp;<em>PMP Examination Specification</em>,<sup id=\"cite_ref-3\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Project_Management_Professional#cite_note-3\">[3]</a></sup>&nbsp;which describes&nbsp;<a title=\"Task (project management)\" href=\"https://en.wikipedia.org/wiki/Task_(project_management)\">tasks</a>&nbsp;out of five&nbsp;<em>performance domains</em>:</p>\r\n<ol>\r\n<li>Initiating the project (13%)</li>\r\n<li>Planning the project (24%)</li>\r\n<li>Executing the project (31%)</li>\r\n<li>Monitoring and controlling the project (25%)</li>\r\n<li>Closing the project (7%)</li>\r\n</ol>\r\n<p>The exam consists of 200 multiple choice questions written against the PMBOK specification and the PMP Code of Ethics. The exam is closed book; no reference materials are allowed. Twenty-five of the 200 questions on the exam are \"sample\" questions used to fine-tune the&nbsp;<a title=\"Degree of difficulty\" href=\"https://en.wikipedia.org/wiki/Degree_of_difficulty\">degree of difficulty</a>&nbsp;and precision of the exam and as such are not counted for or against a test taker. These questions are placed randomly throughout the exam. The test taker is only graded on their proficiency on 175 questions. The numbers in parentheses describe the percentage of questions for each domain.<sup id=\"cite_ref-PMI_PMBOK_4-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Project_Management_Professional#cite_note-PMI_PMBOK-4\">[4]</a></sup></p>\r\n<p>Announced in June 2019, the&nbsp;<em>PMP Examination Content Outline</em><sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Project_Management_Professional#cite_note-5\">[5]</a></sup>&nbsp;will undergo significant re-categorization, effective January 2021, which prescribe 3 all new&nbsp;<em>performance domains</em>:</p>\r\n<ol>\r\n<li>People (42%)</li>\r\n<li>Process (50%)</li>\r\n<li>Business Environment (8%)</li>\r\n</ol>\r\n<p>&nbsp;</p>",
+    "url_name": "Exam-syllabus",
+    "order": 2,
+    "session_duration": "00:20:00"
+  }
+},
+{
+  "model": "courses.lecturesession",
+  "pk": 3,
+  "fields": {
+    "course": 1,
+    "session_name": "Item references",
+    "session_description": "Item references",
+    "session_content": "<p>Each exam item (a question with its possible answers) has at least two references to standard books or other sources of project management. Most of the questions reference the PMI&nbsp;<em><a class=\"mw-redirect\" title=\"A Guide to the Project Management Body of Knowledge\" href=\"https://en.wikipedia.org/wiki/A_Guide_to_the_Project_Management_Body_of_Knowledge\">A Guide to the Project Management Body of Knowledge</a></em>&nbsp;(<em>aka</em>&nbsp;the&nbsp;<a class=\"mw-redirect\" title=\"PMBOK\" href=\"https://en.wikipedia.org/wiki/PMBOK\">PMBOK</a>&nbsp;Guide).<sup id=\"cite_ref-PMI_PMBOK_4-1\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Project_Management_Professional#cite_note-PMI_PMBOK-4\">[4]</a></sup>&nbsp;The PMBOK Guide is currently (2018) in its sixth edition, and the PMP exam changed in March 2018 to align with the updated guide.<sup id=\"cite_ref-6\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Project_Management_Professional#cite_note-6\">[6]</a></sup></p>\r\n<p>The Project Management Framework embodies a project life cycle and five major project management&nbsp;<em>Process Groups</em>:<sup id=\"cite_ref-PMBOK_5th_Ed_7-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Project_Management_Professional#cite_note-PMBOK_5th_Ed-7\">[7]</a></sup></p>\r\n<ol>\r\n<li>Initiating</li>\r\n<li>Planning</li>\r\n<li>Executing</li>\r\n<li>Monitoring and Controlling</li>\r\n<li>Closing</li>\r\n</ol>\r\n<p>encompassing a total of 49 processes.<sup id=\"cite_ref-PMBOK_5th_Ed_7-1\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Project_Management_Professional#cite_note-PMBOK_5th_Ed-7\">[7]</a></sup></p>\r\n<p>Mapped to these five process groups are ten project management&nbsp;<em>Knowledge Areas</em>:</p>\r\n<ol>\r\n<li>Project Integration Management</li>\r\n<li>Project&nbsp;<a title=\"Scope (project management)\" href=\"https://en.wikipedia.org/wiki/Scope_(project_management)\">Scope</a>&nbsp;Management</li>\r\n<li>Project Schedule Management</li>\r\n<li><a class=\"mw-redirect\" title=\"Project Cost Management\" href=\"https://en.wikipedia.org/wiki/Project_Cost_Management\">Project Cost Management</a></li>\r\n<li>Project&nbsp;<a class=\"mw-redirect\" title=\"Quality Management\" href=\"https://en.wikipedia.org/wiki/Quality_Management\">Quality Management</a></li>\r\n<li>Project&nbsp;<a class=\"mw-redirect\" title=\"Resource Management\" href=\"https://en.wikipedia.org/wiki/Resource_Management\">Resource Management</a></li>\r\n<li>Project&nbsp;<a class=\"mw-redirect\" title=\"Communications Management\" href=\"https://en.wikipedia.org/wiki/Communications_Management\">Communications Management</a></li>\r\n<li><a class=\"mw-redirect\" title=\"Project Risk Management\" href=\"https://en.wikipedia.org/wiki/Project_Risk_Management\">Project Risk Management</a></li>\r\n<li>Project Procurement Management</li>\r\n<li>Project&nbsp;<a class=\"mw-redirect\" title=\"Stakeholder Management\" href=\"https://en.wikipedia.org/wiki/Stakeholder_Management\">Stakeholder Management</a><sup id=\"cite_ref-PMBOK_5th_Ed_7-2\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Project_Management_Professional#cite_note-PMBOK_5th_Ed-7\">[7]</a></sup></li>\r\n</ol>\r\n<p>The processes of these knowledge areas are described by their inputs, tools and techniques, and outputs. The PMBOK also emphasizes the interaction and interdependence between different process groups. For example, the outputs from one process may be used by one or more other processes as inputs.</p>\r\n<p>&nbsp;</p>",
+    "url_name": "Item-references",
+    "order": 3,
+    "session_duration": "00:20:00"
+  }
+},
+{
+  "model": "courses.lecturesession",
+  "pk": 4,
+  "fields": {
+    "course": 1,
+    "session_name": "Cert Photo",
+    "session_description": "But how does it look like?",
+    "session_content": "<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://staragile.com/public/uploads/courses/certificate/certificate_1594708962.jpg\" alt=\"PMP Certification Training Melbourne | PMP Course Online\" /></p>\r\n<p>&nbsp;</p>",
+    "url_name": "Cert-Photo",
+    "order": 4,
+    "session_duration": "00:01:00"
+  }
+}
+]
