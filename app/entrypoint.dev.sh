@@ -19,4 +19,7 @@ python manage.py createsuperuser --noinput \
 --username admin \
 --email admin@izcert.com
 
+# Load sample database
+python manage.py loaddata samples/data/data.json
+
 exec "$@"
