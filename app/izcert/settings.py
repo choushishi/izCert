@@ -46,10 +46,12 @@ INSTALLED_APPS = [
     # modules
     'bootstrap_ui',
     'tinymce',
+    'crispy_forms',
 
     # apps
     'welcome.apps.WelcomeConfig',
     'courses.apps.CoursesConfig',
+    'register.apps.RegisterConfig',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +148,11 @@ STATICFILES_DIRS = [
 # Login configures
 LOGIN_REDIRECT_URL = '/welcome/'
 LOGOUT_REDIRECT_URL = '/welcome/'
+
+
+#############################################
+## Module settings
+#############################################
+
+# django-crispy-forms
+CRISPY_TEMPLATE_PACK="bootstrap4"
