@@ -10,7 +10,7 @@
 {% load crispy_forms_tags %}
 
 {% block extra-body-content %}
-  <div style="align-items: center">
+  <div class="container">
     <form method="POST" class="form-group" style="max-width: 330px; margin: 0 auto;">
       {% csrf_token %}
       {{ form|crispy }}
