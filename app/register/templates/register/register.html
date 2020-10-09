@@ -1,0 +1,21 @@
+{% extends "global/base.html" %}
+
+{% load static %}
+
+{% block extra-head-css %}
+  <link href="{% static 'courses/style.css' %}" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block title %}Create an Account{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block extra-body-content %}
+  <div class="container">
+    <form method="POST" class="form-group" style="max-width: 330px; margin: 0 auto;">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <button type="submit" class="btn btn-success">Register</button>
+  </form>
+</div>
+    
+{% endblock %}

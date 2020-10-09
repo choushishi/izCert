@@ -24,6 +24,9 @@ urlpatterns = [
     # Account auth
     path('auth/', include('django.contrib.auth.urls')),
 
+    # Account register
+    path("register/", include('register.urls')),
+
     # Root page -> welcome page
     path('welcome/', include('welcome.urls')),
 
