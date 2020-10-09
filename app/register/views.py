@@ -8,7 +8,6 @@ def register(response):
         if form.is_valid():
             form.save()
             return redirect("/welcome")
-        
     else:
         form = RegisterForm()
 

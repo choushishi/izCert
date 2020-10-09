@@ -1,0 +1,35 @@
+{% extends "global/base.html" %}
+
+{% load static %}
+
+{% block extra-head-css %}
+  <link href="{% static 'courses/style.css' %}" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block extra-body-content %}
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">{{ course.course_name }}</h1>
+      <p class="lead text-muted">{{ course.course_description }}</p>
+    </div>
+  </section>
+  <div class="py-5 bg-light">
+    <div class="container">
+      <h1 class="jumbotron-heading"> Sessions </h1>
+      <hr>
+      {% if sessions %}
+      <ul class="list-group">
+      {% for session in sessions %}
+        <li class="list-group-item">{{ session }}</li>
+      {% endfor %}
+      </ul>
+    {% else %}
+      <p class="lead"> No sessions available</p>
+    {% endif %}
+    </div>
+
+  </div>
+
+
+
+{% endblock %}
